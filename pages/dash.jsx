@@ -7,7 +7,7 @@ export default function Portfolio() {
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">My Portfolio</h1>
           <nav className="space-x-4">
-            <a href="about" className="hover:underline">About</a>
+            <a href="#about" className="hover:underline">About</a>
             <a href="projects" className="hover:underline">Projects</a>
             <a href="contact" className="hover:underline">Contact</a>
           </nav>
