@@ -1,55 +1,49 @@
-"use client";
+'use client';
 
-import React from "react";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-export default function About() {
+export default function CompanyPage() {
   return (
-    <main className="min-h-screen bg-white text-black px-6 py-12">
-      <motion.section
-        className="max-w-4xl mx-auto"
-        initial={{ opacity: 0, y: 40 }}
+    <main className="min-h-screen bg-black text-white p-8">
+      {/* Header */}
+      <motion.h1
+        initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6 }}
+        className="text-4xl font-bold text-blue-500 mb-6"
       >
-        <h1 className="text-4xl font-bold text-center text-blue-600 mb-6">About Me</h1>
-        <motion.p
-          className="text-lg leading-relaxed text-gray-800 text-center mb-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-        >
-          I'm Altaf Sandhu, a passionate Frontend Developer and SEO Specialist. I specialize in crafting responsive, user-friendly web interfaces using React, Next.js, and Tailwind CSS. With a strong background in off-page SEO and guest posting, I help websites rank better and reach a wider audience.
-        </motion.p>
+        🚀 Welcome to Nova Tech
+      </motion.h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <motion.div
-            className="bg-blue-50 border border-blue-100 p-6 rounded-xl shadow hover:shadow-md transition"
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-          >
-            <h2 className="text-xl font-semibold text-blue-700 mb-2">Skills</h2>
-            <ul className="list-disc list-inside text-gray-700">
-              <li>HTML, CSS, JavaScript</li>
-              <li>React & Next.js</li>
-              <li>Tailwind CSS</li>
-              <li>SEO & Guest Posting</li>
-            </ul>
-          </motion.div>
+      {/* About Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="bg-[#1a1a1a] p-6 rounded-xl mb-6 shadow-md"
+      >
+        <h2 className="text-2xl font-semibold text-red-500 mb-2">About Us</h2>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Nova Tech is a cutting-edge digital solutions company, delivering modern web development, app engineering, SEO, and API integrations. 
+          We focus on building scalable, high-performance platforms for businesses that want to lead in the digital age.
+        </p>
+      </motion.section>
 
-          <motion.div
-            className="bg-blue-50 border border-blue-100 p-6 rounded-xl shadow hover:shadow-md transition"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-          >
-            <h2 className="text-xl font-semibold text-blue-700 mb-2">Experience</h2>
-            <p className="text-gray-700">
-              With hands-on experience in both development and SEO, I bring a creative and strategic approach to every project. Whether it's designing a fast-loading UI or boosting organic traffic, I focus on results.
-            </p>
-          </motion.div>
-        </div>
+      {/* Reputation Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+        className="bg-[#2c0a0a] p-6 rounded-xl shadow-md"
+      >
+        <h2 className="text-2xl font-semibold text-blue-400 mb-2">Why Choose Nova Tech?</h2>
+        <ul className="list-disc pl-6 space-y-2 text-gray-200">
+          <li>⭐ Trusted by over 500+ clients worldwide</li>
+          <li>💼 Delivered 300+ successful projects</li>
+          <li>🚀 5+ years of industry experience</li>
+          <li>🛡️ 24/7 support and maintenance</li>
+          <li>🔧 Expert team of developers & designers</li>
+        </ul>
       </motion.section>
     </main>
   );
